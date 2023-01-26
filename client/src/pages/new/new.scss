@@ -1,0 +1,241 @@
+@import "../../styles/colors.scss";
+
+@keyframes up {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(15%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .getData {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3em;
+    gap: 3em;
+    height: 100%;
+    justify-content: space-evenly;
+
+    h1 {
+      color: $color-two;
+      font-style: italic;
+      border-bottom: 0.15em solid $color-two;
+      padding-bottom: 0.3em;
+      text-align: center;
+    }
+
+    button {
+      font-family: "Bebas Neue", sans-serif;
+      font-size: 3rem;
+      padding: 0.5em 1em;
+      letter-spacing: 0.02em;
+      border: none;
+      border-radius: 0.5em;
+      background-color: $color-two;
+      color: $color-one;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $color-three;
+      }
+    }
+
+    .north {
+      color: $color-two;
+      font-size: 7rem;
+      animation: up ease-in-out infinite 2s;
+    }
+  }
+
+  .loader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3em;
+    gap: 3em;
+
+    h1 {
+      color: $color-two;
+      font-style: italic;
+      border-bottom: 0.15em solid $color-two;
+      padding-bottom: 0.3em;
+      text-align: center;
+    }
+
+    .lds-ellipsis {
+      display: flex;
+      gap: 0.5em;
+      color: $color-two;
+      width: 40%;
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 0.5em;
+      justify-content: center;
+      align-items: center;
+
+      div {
+        background-color: $color-two;
+        width: 1.5em;
+        height: 1.5em;
+        border-radius: 50%;
+        animation: load ease-in-out infinite 0.8s;
+        flex-shrink: 0;
+
+        &:nth-child(1) {
+          animation-delay: 0s;
+        }
+        &:nth-child(2) {
+          animation-delay: 0.2s;
+        }
+        &:nth-child(3) {
+          animation-delay: 0.4s;
+        }
+
+        @keyframes load {
+          0% {
+            transform: scale(0.5);
+          }
+          50% {
+            transform: scale(1);
+          }
+
+          100% {
+            transform: scale(0.5);
+          }
+        }
+      }
+    }
+  }
+
+  .add {
+    background-color: $color-four;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 1.5em;
+    margin: 1em;
+    gap: 2em;
+    border-radius: .5em;
+    color: $color-one;
+    box-shadow: 10px 10px 11px 0px rgba(0,0,0,0.65);
+
+    .top {
+      display: flex;
+      align-items: flex-start;
+      gap: clamp(2em, 10vw, 10em);
+
+      .location {
+        display: flex;
+        align-items: center;
+
+        .pin {
+        }
+        p {
+        }
+      }
+
+      .date {
+        display: flex;
+        flex-direction: column;
+        gap: .5em;
+
+        h3 {
+        }
+
+        p {
+        }
+      }
+    }
+
+    .catch {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: .5em;
+
+      h4 {
+        font-family: "Bebas Neue", sans-serif;
+        font-style: italic;
+        letter-spacing: 0.1em;
+        font-size: 1.5rem;      }
+
+      input {
+
+        padding: 1em;
+        font-size: 1.5rem;
+        border-radius: .5em;
+        border: none;
+        text-align: center;
+        max-width: 5em;
+        appearance: textfield;
+
+        &:focus {
+            outline: none;
+        }
+
+        
+      }
+    }
+
+    .description {
+      font-size: 1.2rem;
+    }
+
+    .details {
+      display: flex;
+      gap: 3em;
+      flex-wrap: wrap;
+      align-items: flex-end;
+      justify-content: center;
+
+      .info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: .5em;
+
+        img {
+        }
+
+        .icon {
+            color: $color-one;
+        }
+
+        p {
+        }
+      }
+    }
+
+    button {
+
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 1.5rem;
+        padding: 0.5em 1em;
+        letter-spacing: 0.04em;
+        border: none;
+        border-radius: 0.5em;
+        background-color: $color-two;
+        color: $color-one;
+        cursor: pointer;
+  
+        &:hover {
+          background-color: $color-three;
+        }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+@import "../../styles/colors.scss";
+
+.footer {
+    width: 100vw;
+    background-color: $color-two;
+    color: $color-one;
+    text-align: center;
+    padding: 2em;
+
+
+    h4 {
+        font-size: 1.5rem;
+        font-style: italic;
+        font-family: 'Bebas Neue', 'cursive';
+        letter-spacing: 0.05em;
+    }
+}

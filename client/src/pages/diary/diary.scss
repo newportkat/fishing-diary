@@ -1,0 +1,97 @@
+@import "../../styles/colors.scss";
+
+.diaryContainer {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5em;
+  padding: 1.5em;
+  background-color: $color-five;
+
+  .empty {
+    color: $color-two;
+    font-style: italic;
+    border-bottom: 0.15em solid $color-two;
+    padding-bottom: 0.3em;
+    text-align: center;
+  }
+
+  .entry {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+
+    .example {
+      background-color: $color-three;
+      position: absolute;
+      padding: 1em;
+      color: $color-one;
+      font-weight: 600;
+      font-family: "Bebas neue", sans-serif;
+      font-size: 1.2rem;
+      letter-spacing: 0.05em;
+      transform: rotate(-25deg);
+      text-align: center;
+      opacity: 0.8;
+      width: 90%;
+      left: 5%;
+      border-radius: 0.5em;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 0.5em;
+      justify-content: space-between;
+      background-color: $color-two;
+      color: $color-five;
+      border-radius: 0.5em 0.5em 0 0;
+
+      h2 {
+        padding: 0.3em;
+        text-align: center;
+      }
+
+      .delete {
+        margin-right: .3em;
+        font-size: 2rem;
+        cursor: pointer;
+
+        &:hover {
+          color: $color-four;
+        }
+      }
+    }
+  }
+
+  .data {
+    padding: 1em;
+    background-color: $color-four;
+    min-width: 12em;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0 0 0.5em 0.5em;
+    gap: 0.5em;
+
+    .field {
+      display: flex;
+      flex-direction: column;
+
+      .label {
+        flex: 1;
+        font-weight: 500;
+        font-size: 0.9rem;
+        color: $color-one;
+      }
+
+      p {
+        font-weight: 600;
+        color: $color-five;
+      }
+    }
+  }
+}

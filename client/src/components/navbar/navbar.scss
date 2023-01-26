@@ -1,0 +1,119 @@
+@import "../../styles/colors.scss";
+
+.navbar {
+  display: flex;
+  align-items: center;
+  background-color: $color-two;
+  justify-content: space-around;
+  position: relative;
+
+  .popout {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    transition: all 0.3s ease;
+    background-color: $color-four;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2em;
+    color: $color-one;
+    gap: 2em;
+    z-index: 999;
+
+    .close {
+      .x {
+        font-size: 3rem;
+        cursor: pointer;
+
+        &:hover {
+          color: $color-five;
+        }
+      }
+    }
+
+    .popout-links {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5em;
+      font-family: "Bebas Neue", cursive;
+      font-size: 2rem;
+      .menu-home {
+        color: $color-one;
+        &:hover {
+          color: $color-five;
+        }
+      }
+
+      .popout-link {
+        color: $color-one;
+        &:hover {
+          color: $color-five;
+        }
+      }
+    }
+
+    .popout-logo {
+      margin-top: auto;
+
+      img {
+        width: 100%;
+        max-width: 10em;
+      }
+    }
+  }
+
+  .menu {
+    .hamburger {
+      color: $color-one;
+      font-size: 3rem;
+      cursor: pointer;
+
+      &:hover {
+        color: $color-five;
+      }
+    }
+
+    @media (min-width: 651px) {
+      display: none;
+    }
+  }
+
+  .logo {
+    padding: 1.5em;
+
+    img {
+      width: 100%;
+      max-width: 15em;
+      cursor: pointer;
+
+
+      @media (max-width: 800px) {
+        max-width: 10em;
+      }
+    }
+  }
+
+  .links {
+    display: flex;
+    gap: 5em;
+
+    .link {
+      font-family: "Bebas Neue", cursive;
+      letter-spacing: 0.05em;
+      color: $color-one;
+      font-size: 1.3rem;
+
+
+      &:hover {
+        color: $color-five;
+      }
+    }
+
+    @media (max-width: 650px) {
+      display: none;
+    }
+  }
+}
